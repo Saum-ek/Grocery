@@ -1,0 +1,113 @@
+$xs: 580px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1400px;
+$xxl: 1536px;
+
+.container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+ 
+    @media screen and (min-width: $lg) {
+        max-width: 98%;
+    }
+ 
+    @media screen and (min-width: $xl) {
+        max-width: $xl - 60px;
+    }
+ 
+    @media screen and (min-width: $xxl) {
+        max-width: 1365px;
+    }
+}
+
+.max-w-500 {
+    max-width: 500px;
+}
+
+.category {
+    min-width: 600px;
+}
+
+.category-btn {
+    min-width: 200px;
+
+}
+
+// .nav-search{
+//     width:500px;
+//     min-width:150px;
+// }
+.nav-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#one {
+    background-image: url('Image/01.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    background-size: cover;
+}
+
+.btn-secondary {
+    --bs-btn-color: #333d4c;
+    --bs-btn-bg: #eef1f6;
+    --bs-btn-border-color: #eef1f6;
+    --bs-btn-hover-color: #181d25;
+    --bs-btn-hover-bg: #e0e5eb;
+    --bs-btn-hover-border-color: #e0e5eb;
+    --bs-btn-active-color: #333d4c;
+    --bs-btn-active-bg: #e0e5eb;
+    --bs-btn-active-border-color: #e0e5eb;
+    --bs-btn-disabled-color: #333d4c;
+    --bs-btn-disabled-bg: #eef1f6;
+    --bs-btn-disabled-border-color: #eef1f6;
+}
+button,
+input,
+select,
+textarea {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+ 
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 12px;
+}
+ 
+::-webkit-scrollbar-track:hover {
+    background: rgb(207, 205, 205);
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--primary-rgb), 0.95);
+    border-radius: 12px;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--primary-rgb), 1);
+}
+ 
+.object{
+    object-fit: cover;
+}
