@@ -28,6 +28,11 @@ $xxl: 1536px;
     max-width: 500px;
 }
 
+.max-height{
+     height: 300px;
+     max-height: 300px;
+}
+
 .category {
     min-width: 600px;
 }
@@ -110,4 +115,33 @@ textarea {
  
 .object{
     object-fit: cover;
+}
+.card-img{
+    height: 300px;
+object-fit: cover;
+   
+}
+.banner{
+    left: 0;
+}
+.card-bg{
+    background-color: rgb(249, 234, 234);
+
+}
+.card-2{
+    background-color: rgb(236, 253, 236) !important;
+}
+.card-3{
+    background-color: rgb(236, 244, 255) !important;
+}
+.img-card{
+  max-width: 200px;
+  min-width: 150px;  // Maximum size on large screens
+    width: 100%;       // Fill container on small screens
+    height: auto;
+   
+   
+}
+.footer-bg{
+    background-color:rgb(39, 42, 53);
 }

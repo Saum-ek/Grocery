@@ -24,6 +24,11 @@
   max-width: 500px;
 }
 
+.max-height {
+  height: 300px;
+  max-height: 300px;
+}
+
 .category {
   min-width: 600px;
 }
@@ -101,5 +106,39 @@ textarea {
 }
 
 .object {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
+.card-img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner {
+  left: 0;
+}
+
+.card-bg {
+  background-color: rgb(249, 234, 234);
+}
+
+.card-2 {
+  background-color: rgb(236, 253, 236) !important;
+}
+
+.card-3 {
+  background-color: rgb(236, 244, 255) !important;
+}
+
+.img-card {
+  max-width: 200px;
+  min-width: 150px;
+  width: 100%;
+  height: auto;
+}
+
+.footer-bg {
+  background-color: rgb(39, 42, 53);
+}/*# sourceMappingURL=style.css.map */
