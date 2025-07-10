@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <!--css-->
   <link rel="stylesheet" href="style.css">
+  <!--Slick-->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
   <title>Grocery</title>
 </head>
 
@@ -481,48 +484,9 @@
   </div>
   <!--End:banner-->
 
-  <!--dem0
-  <div class="container ">
-    <div class="d-flex gap-4">
-
-       <div class="d-flex card-1 w-25 rounded-4">
-      <div class="d-flex flex-column p-3">
-        <p>124 products</p>
-        <h5>Only fresh fish to your table</h5>
-        <span >shop now<i class="bi bi-chevron-right "></i></span>
-      </div>
-      <div>
-        <img src="Image/01.webp" class="img-card">
-      </div>
-    </div>
-      
-
-      <div class="d-flex card-1 w-25">
-      <div class="d-flex flex-column p-3" >
-        <p>97 products</p>
-        <h5>Products for Easter table</h5>
-        <button>shop now<i class="bi bi-chevron-right "></i></button>
-      </div>
-      <div>
-        <img src="Image/01.webp" class="img-card">
-      </div>
-    </div>
-
-     <div class="d-flex card-1 w-25">
-      <div class="d-flex flex-column p-3">
-        <p>124 products</p>
-        <h5>Only fresh fish to your table</h5>
-        <button>shop now<i class="bi bi-chevron-right "></i></button>
-      </div>
-      <div>
-        <img src="Image/01.webp" class="img-card">
-      </div>
-    </div>
-  </div>-->
-
   <!--cards-->
-  <div class="container">
-    <div class="d-flex gap-4 m-4 w-100">
+  <div class="container cards">
+    <div class="d-flex gap-4 m-4 w-100 ">
 
       <div class="card mb-3 border-0 rounded-4 card-bg">
         <div class="d-flex flex-column-reverse flex-sm-row ">
@@ -539,7 +503,7 @@
 
 
       
-        <div class="card mb-3 bg-secondary-subtle border-0 rounded-4 card-2">
+        <div class="card mb-3 bg-secondary-subtle border-0 rounded-4 card-2 ">
           <div class="d-flex flex-column-reverse flex-sm-row ">
             <div class="d-flex  flex-column justify-content-center p-3">
               <p>97 products</p>
@@ -553,7 +517,7 @@
         </div>
      
 
-        <div class="card mb-3 bg-secondary-subtle border-0 rounded-4 card-3">
+        <div class="card mb-3 bg-secondary-subtle border-0 rounded-4 card-3 ">
           <div class="d-flex flex-column-reverse flex-sm-row ">
             <div class="d-flex flex-column justify-content-center p-3">
              <div>
@@ -571,6 +535,338 @@
 
     </div>
   </div>
+  <!--Card:End-->
+
+  <!--Start:product-->
+  <div class="container">
+    <div class="row">
+      
+        <div class="col-md-3 ">  
+          <div class="d-flex flex-column gap-3">
+          <h4>Categories</h4>
+            <div class="col">
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary-subtle cat-pic">
+              <img src="Image/catlog 1.webp" width="40">
+            </div>
+            <div>
+              <h6>Bakery & bread</h6>
+              <span>230 products</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col">
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary-subtle cat-pic">
+              <img src="Image/catlog 2.webp" width="40">
+            </div>
+            <div>
+              <h6>Vegetables</h6>
+              <p>180 products</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col">
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary-subtle cat-pic">
+              <img src="Image/catlog 3.webp" width="40">
+            </div>
+            <div>
+              <h6>Fresh fruits</h6>
+              <p>205 products</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col">
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary-subtle cat-pic">
+              <img src="Image/catlog4.webp" width="40">
+            </div>
+            <div>
+              <h6>Meet Italian dinner</h6>
+              <p>309 products</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary-subtle cat-pic">
+              <img src="Image/catlog5.webp" width="40">
+            </div>
+            <div>
+              <h6>Beverages</h6>
+              <p>374 products</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col">
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary-subtle cat-pic">
+              <img src="Image/catlog6.webp" width="40">
+            </div>
+            <div>
+              <h6>Meat products</h6>
+              <p>124 products</p>
+              
+            </div>
+          </div>
+        </div>
+
+         <div class="col">
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary-subtle cat-pic">
+              <img src="Image/catlog7.webp" width="40">
+            </div>
+            <div>
+              <h6>Sauces and Ketchup</h6>
+              <p>219 products</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col">
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary-subtle cat-pic">
+              <img src="Image/catlog8.webp" width="40">
+            </div>
+            <div>
+              <h6>Dairy and eggs</h6>
+              <p>146 products</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      
+        </div>
+
+        <div class="col-md-9">
+          <div class="row">
+
+            
+
+                <div class="card product border border-0" >
+  <img src="Image/p.1.webp" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h6 class="card-title">$2.15</h6>
+    <p>Muesli Fitness Energy,gluten free</p>
+    <p class="text-secondary">500g</p>
+  </div>
+</div>
+
+  <div class="card product border border-0" >
+  <img src="Image/p2.webp" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h6 class="card-title">$3.12</h6>
+    <p>Fresh orange Klementina,spain</p>
+    <p class="text-secondary">1kg</p>
+  </div>
+</div>
+
+  <div class="card product border border-0" >
+  <img src="Image/p3.webp" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h6 class="card-title">$0.80</h6>
+    <p>Pepsi soda classic,can</p>
+    <p class="text-secondary">300ml</p>
+  </div>
+</div>
+
+  <div class="card product border border-0" >
+  <img src="Image/p4.webp" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h6 class="card-title">$2.99</h6>
+    <p>Mozzarella mini cheese Granaloro</p>
+    <p class="text-secondary">250g</p>
+  </div>
+</div>
+
+   <div class="card product border border-0" >
+  <img src="Image/p5.webp" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h6 class="card-title">$1.24</h6>
+    <p>Coconut,Indonesia</p>
+    <p class="text-secondary">1 coconut</p>
+  </div>
+</div>
+
+  <div class="card product border border-0" >
+  <img src="Image/p6.webp" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h6 class="card-title">$3.95</h6>
+      <p>Pesto sauce Barilla with basik,Italy</p>
+      <p class="text-secondary">200g</p>
+  </div>
+</div>
+
+  <div class="card product border border-0" >
+  <img src="Image/p7.webp" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h6 class="card-title">$1.99</h6>
+    <p>Fresh mango,Spain</p>
+    <p class="text-secondary">1 Mango</p>
+  </div>
+</div>
+ 
+  <div class="card product border border-0" >
+  <img src="Image/p8.webp" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h5 class="card-title">Fresh green asparagus,bunch</h6>
+      <p class="text-secondary">300g</p>
+  </div>
+</div>
+
+          
+
+          </div>
+            
+        </div>
+    </div>
+  </div>
+  <!--End:product-->
+
+  <!--svg-->
+  <div class="container">
+  <div class="row mb-5">
+    <h3 class="text-center m-5">Shop By Lifestyle</h2>
+
+    <div class="col-lg-3">
+      <div class="d-flex justify-content-center">
+        <div class="svg-1 mb-4 d-flex align-items-center justify-content-center ">
+        <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none"><path d="M62.631 13.369l-7.214 7.214M20.583 55.417l-7.214 7.214M38 51.037c0-11.315-13.926-11.315-13.926-11.315s0 13.926 11.315 13.926H38m0-2.611v2.611m0-2.611c0-11.315 13.926-11.315 13.926-11.315s0 13.926-11.315 13.926H38m0-14.222c0-11.315-13.926-11.315-13.926-11.315s0 13.926 11.315 13.926H38m0-2.611v2.611m0-2.611c0-11.315 13.926-11.315 13.926-11.315s0 13.926-11.315 13.926H38m0 18.585v-6.967M72.833 38c0 19.238-15.595 34.833-34.833 34.833S3.167 57.238 3.167 38 18.762 3.167 38 3.167 72.833 18.762 72.833 38zM38 15.378s9.847 9.849 1.846 17.849L38 35.074l-1.846-1.847C28.153 25.227 38 15.378 38 15.378z" stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </div>
+      </div>
+      <div class="text-center">
+        <h4>Gluten-Free</h4>
+        <p class="text-secondary">Foods that don't contain gluten</p>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+    <div class="d-flex justify-content-center">
+       <div class=" mb-4 d-flex align-items-center justify-content-center svg-2">
+      <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none"><g stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10"><g stroke-linecap="round" stroke-linejoin="round"><path d="M16.842 37.347c5.205 6.789 12.251 18.802 12.251 36.436h17.812c0-17.634 7.066-29.648 12.251-36.436m-7.599-3.958c-3.048 4.71-6.452 10.984-9.084 18.565V32.142"></path><path d="M33.547 32.162v19.811c-2.632-7.56-6.036-13.834-9.104-18.584"></path></g><path d="M62.502 15.577c-.079 0-.139.02-.218.02-1.029-5.086-5.522-8.926-10.905-8.926-1.405 0-2.731.297-3.958.752-1.979-3.127-5.423-5.205-9.401-5.205-3.958 0-7.422 2.098-9.401 5.205-1.227-.475-2.553-.752-3.958-.752-5.403 0-9.896 3.84-10.905 8.926-.079 0-.139-.02-.218-.02-6.155 0-11.281 4.988-11.281 11.143s5.126 11.143 11.281 11.143c3.76 0 7.046-1.88 9.045-4.73.673.158 1.366.277 2.078.277 2.692 0 5.067-1.207 6.709-3.107 1.623 1.88 3.978 3.107 6.65 3.107s5.027-1.227 6.65-3.107c1.643 1.88 4.018 3.107 6.709 3.107.712 0 1.405-.099 2.078-.277 2.019 2.85 5.304 4.73 9.045 4.73 6.155 0 11.281-4.987 11.281-11.143s-5.126-11.143-11.281-11.143z" stroke-linejoin="round"></path></g></svg>
+     </div>
+    </div>
+     <div class="text-center">
+        <h4>Vegan</h4>
+        <p class="text-secondary">Vegetable based goodness</p>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <div class="d-flex justify-content-center">
+        <div class="mb-4 d-flex align-items-center justify-content-center svg-3">
+        <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none"><path d="M9.5 72.8336C9.5 72.8336 9.875 42.7074 38 34.8336" stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M11.1264 58.4427C7.13273 49.8272 -11.3834 1.3653 66.3117 6.74996C67.4008 6.74996 68.49 7.82689 68.8531 8.90382C70.6684 18.9552 74.6621 64.1863 13.6678 59.8786C12.2156 59.8786 11.4895 59.5196 11.1264 58.4427Z" stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10"></path></svg>
+      </div>
+      </div>
+      <div class="text-center">
+        <h4>Plant base</h4>
+        <p class="text-secondary">Based on herbal ingredients</p>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+    <div class="d-flex justify-content-center">
+      <div   class="mb-4 d-flex align-items-center justify-content-center svg-4 ">
+      <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none" stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10" stroke-linejoin="round"><path d="M58.59 33.535c-2.219-3.028-3.595-6.515-4.043-10.133-1.227-9.91-7.437-16.42-6.862-15.718-4.878-5.956-14.1-6.035-19.083-.163-4.128 4.863-6.442 10.345-7.191 16.12-.454 3.502-1.759 6.871-3.919 9.785-3.034 4.093-4.824 9.13-4.824 14.577 0 13.7 11.607 24.962 25.584 24.829 13.876-.132 25.083-11.198 25.083-24.829 0-5.399-1.758-10.395-4.744-14.469z"></path><path d="M48.871 48.815c0 5.885-4.867 10.655-10.871 10.655S27.129 54.7 27.129 48.815 31.996 34.495 38 34.495s10.871 8.435 10.871 14.32z"></path></svg>
+    </div>
+    </div>
+    <div class="text-center">
+        <h4>Keto</h4>
+        <p class="text-secondary">Good fat served in food</p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <!--End:svg-->
+
+  <!--Start:Recipes-->
+  <div class="container">
+    <div class="row">
+      
+      <h2 >Recipes</h2>
+     
+     
+      <div class="col-lg-5 mt-4 mb-5">
+
+<div>
+    <div class="card mb-3 border-0 w-75" >
+  <div class="row g-0 ">
+    <div class="col-sm-4 col">
+      <img src="Image/recipie1.webp" class="img-fluid rounded-start rounded-2" alt="...">
+    </div>
+    <div class="col-sm-8 col">
+      <div class="card-body">
+        <p class="card-title fw-semibold">Garden salad with a mix of lettuce,cucumber and tomato</h5>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3 border-0 w-75" >
+  <div class="row g-0 ">
+    <div class="col-sm-4 col">
+      <img src="Image/reciepie2.webp" class="img-fluid rounded-start rounded-2" alt="...">
+    </div>
+    <div class="col-sm-8 col">
+      <div class="card-body">
+        <p class="card-title fw-semibold">Raspberry fresh lemonade with lemon,strawberry syrup and mint</h5>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3 border-0 w-75" >
+  <div class="row g-0 ">
+    <div class="col-sm-4 col">
+      <img src="Image/reciepe3.webp" class="img-fluid rounded-start rounded-2" alt="...">
+    </div>
+    <div class="col-sm-8 col">
+      <div class="card-body">
+        <p class="card-title fw-semibold">Penne pasta with spinach and zucchini in a creamy sauce</h5>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div>
+ <button class="btn ">View all <i class="bi bi-chevron-right"></i></button>
+</div>
+
+      </div>
+
+      <div class="col-lg-7">
+        <div class="border border-1 p-4 rounded-2 book">
+          <div class="d-flex ">
+           <div>
+          <img src="Image/book-cover.webp"  class="rounded-2 book-img">
+        </div>
+          <div  class="d-flex flex-column justify-content-center p-4  ">
+            <h4>The Best in Gastronomy</h4>
+            <p>Author:<span>Dana Chambers</span></p>
+            <p>An exquisite cookbook that takes readers on a culinary journey around the world. With stunning photography and detailed instructions ...</p>
+            <h4>$12.40</h4>
+            <button type="button" class="btn btn-dark rounded-pill text-nowrap">Shop Book <i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+        </div>
+        
+       
+     </div>
+
+    </div>
+  </div>
+  <!--End:Recipes-->
 
   <!--bootom cards-->
   <div class="container d-flex">
@@ -603,8 +899,7 @@
             <div class="d-flex align-items-center p-3">
               <div class="">
                 <h4 class="card-title">We'd love to hear what you think!</h5>
-                  <button type="button" class="btn border-0"> Give a Feedback <i
-                      class="bi bi-chevron-right"></i></button>
+                  <button type="button" class="btn border-0"> Give a Feedback <i class="bi bi-chevron-right fs-6"></i></button>
 
               </div>
             </div>
@@ -816,6 +1111,48 @@
       $(".search_wrap_sm").toggleClass("d-none")
     })
   </script>
+
+  <!--slick-->
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script>
+  
+  $(document).ready(function(){
+$('.cards').slick({
+  dots: true,
+ 
+ 
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+  });
+</script>
 </body>
 
 </html>

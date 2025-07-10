@@ -46,6 +46,19 @@
   justify-content: center;
 }
 
+.cat-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product {
+  width: 230px;
+}
+
 #one {
   background-image: url("Image/01.webp");
   background-size: cover;
@@ -141,4 +154,43 @@ textarea {
 
 .footer-bg {
   background-color: rgb(39, 42, 53);
+}
+
+.svg-1 {
+  background-color: rgb(254, 247, 234);
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.svg-2 {
+  background-color: rgb(226, 239, 226);
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.svg-3 {
+  background-color: rgb(232, 243, 248);
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.svg-4 {
+  background-color: rgb(255, 243, 245);
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.book {
+  max-height: 420px;
+  height: 100%;
+}
+
+.book-img {
+  width: 100%;
+  max-width: 600px;
+  min-width: 200px;
 }/*# sourceMappingURL=style.css.map */
