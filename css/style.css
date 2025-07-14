@@ -55,8 +55,18 @@
   justify-content: center;
 }
 
-.product {
-  width: 230px;
+.product-img {
+  max-width: 180px;
+}
+
+.card-sp {
+  background-color: rgb(170, 204, 218);
+}
+
+.last-card {
+  max-width: 270px;
+  max-height: 420px;
+  width: 100%;
 }
 
 #one {
@@ -147,7 +157,6 @@ textarea {
 
 .img-card {
   max-width: 200px;
-  min-width: 150px;
   width: 100%;
   height: auto;
 }
@@ -184,13 +193,41 @@ textarea {
   border-radius: 50%;
 }
 
-.book {
-  max-height: 420px;
-  height: 100%;
+.banner-Items {
+  height: unset !important;
+  aspect-ratio: 4/3;
+  max-height: calc(100vh - 200px);
+  width: 100%;
 }
 
-.book-img {
-  width: 100%;
-  max-width: 600px;
-  min-width: 200px;
+.plus-sign:hover {
+  background-color: red !important;
+  color: white;
+}
+
+@keyframes mymove {
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.heart-sign:hover {
+  animation: mymove 0.8s ease;
+}
+
+.underline:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+::after {
+  transform: scaleX(1);
 }/*# sourceMappingURL=style.css.map */
