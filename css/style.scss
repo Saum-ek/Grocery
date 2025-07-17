@@ -203,20 +203,102 @@ object-fit: cover;
 }
 @keyframes mymove {
    
-    20%{transform: scale(1);}
-    50%{transform: scale(0);}
-    75%{transform: scale(1);}
-    100%{transform: scale(0);}
+    10%{transform: scale(1.3);}
+    35%{transform: scale(1);}
+    60%{transform: scale(1.3);}
+    85%{transform: scale(1);}
+    
 
 }
+.heart-sign{
+    right: 5px;
+    
+}
 .heart-sign:hover{
-    animation: mymove .8s ease ;
+    animation: mymove .6s ease ;
 }
 .underline:hover{
     text-decoration: underline;
     text-decoration-thickness: 1px;
 }
-::after{
-    transform: scaleX(1),
-    transform-origin: bottom-left,
+.underline-animation {
+    position: relative;
+    text-decoration: none;
+   
+}
+.underline-animation::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease;
+}
+.underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    height: 1.5px;
+}
+.button-last{
+    position: absolute;
+    right: 2%;
+    rotate: -90deg;
+    bottom: 10%;
+}
+.email-text::placeholder{
+       color: white;
+}
+.email-text:focus{
+    border-color: #ffffff;
+}
+.email-text{
+    border-color:rgb(105, 103, 103) ;
+}
+.recipe-img{
+    width: 150px;
+    height: auto;
+}
+.blog-img{
+    object-fit: cover;
+}
+.whole-product:hover{
+    .plus-sign{
+    background-color: red !important;
+    color: white;
+}
+
+}
+@keyframes moveicons{
+    20%{transform: scale(1.3);}
+    50%{transform: scale(1);}
+}
+.nav-icons:hover{
+      animation: .6s moveicons forwards;
+}
+.whole-product {
+  margin-bottom: 1.5rem;
+}
+
+.whole-product .card {
+  height: 90%;
+  min-height: 280px;
+}
+
+.whole-product .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.whole-product .card-body p {
+  margin-bottom: 0.25rem;
+}
+
+.whole-product .card-body .text-secondary {
+  margin-bottom: 0;
 }
