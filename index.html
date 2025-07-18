@@ -2,1445 +2,1576 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <!--bootstrap-->
-  <link href="/css/bootstrap.css" rel="stylesheet">
-  <!--bootstrap icon-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <!--css-->
-  <link rel="stylesheet" href="/slick/slick.css">
-  <link rel="stylesheet" href="/slick/slick-theme.css">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="utf-8">
+    <!--bootstrap-->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <!--bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="/slick/slick.css">
+    <link rel="stylesheet" href="/slick/slick-theme.css">
+    <link rel="stylesheet" href="/css/style.css">
 
-  <title>Grocery</title>
+    <title>Grocery</title>
 </head>
 
 <body class="position-relative">
-  <header class="border-bottom sticky-top bg-white">
-    <nav class="navbar">
-      <div class="container py-2 d-flex  align-items-center gap-4">
-        <!-- Header left -->
-        <div class="d-flex gap-2 gap-sm-4 align-items-center">
-          <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="fs-2"><i class="bi bi-list "></i></span>
-          </button>
+    <header class="border-bottom sticky-top bg-white">
+        <nav class="navbar">
+            <div class="container py-2 d-flex  align-items-center gap-4">
+                <!-- Header left -->
+                <div class="d-flex gap-2 gap-sm-4 align-items-center">
+                    <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="fs-2"><i class="bi bi-list "></i></span>
+                    </button>
 
-          <!-- logo -->
-          <h2 class="mb-0">Cartzilla</h2>
+                    <!-- logo -->
+                    <h2 class="mb-0">Cartzilla</h2>
 
-          <!--Start: Categories dropdown -->
-          <div class="d-none d-lg-block ">
-            <div class="dropdown">
-              <button class="btn btn-secondary rounded-pill  py-2 px-4" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="fs-5"><i class="bi bi-grid"></i></span>
-                <span class="fw-medium p-2">Categories</span>
-                <span class="ps-4 fs-"><i class="bi bi-chevron-down"></i></span>
-              </button>
-              <div class="dropdown-menu p-3 category">
-                <div class="row">
-                  <div class="col">
-                    One of three columns
-                  </div>
-                  <div class="col">
-                    One of three columns
-                  </div>
-                  <div class="col">
-                    One of three columns
-                  </div>
-                  <div class="col">
-                    One of three columns
-                  </div>
+                    <!--Start: Categories dropdown -->
+                    <div class="d-none d-lg-block ">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary rounded-pill  py-2 px-4" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="fs-5"><i class="bi bi-grid"></i></span>
+                                <span class="fw-medium p-2">Categories</span>
+                                <span class="ps-4 fs-"><i class="bi bi-chevron-down"></i></span>
+                            </button>
+                            <div class="dropdown-menu p-3 category">
+                                <div class="row">
+                                    <div class="col">
+                                        One of three columns
+                                    </div>
+                                    <div class="col">
+                                        One of three columns
+                                    </div>
+                                    <div class="col">
+                                        One of three columns
+                                    </div>
+                                    <div class="col">
+                                        One of three columns
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-              </div>
+                <!--End: Categories dropdown -->
+
+                <!-- Search -->
+                <div class=" flex-grow-1 max-w-500 mx-auto position-relative d-none d-md-block">
+                    <input class="form-control  py-2 rounded-5 nav-search  " type="search"
+                        placeholder="Search for products " aria-label="Search" />
+                    <div class="position-absolute top-50 end-0 translate-middle-y me-3">
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div>
+
+                <!-- header right -->
+                <div class="d-flex gap-3 align-items-center">
+                    <div class=" pe-5">
+                        <button
+                            class="d-flex d-none d-xl-block flex-column align-items-start border-0 bg-transparent justify-content-start text-start"
+                            type="button" data-bs-toggle="offcanvas" data-bs-target="#deliveryOffcanvas"
+                            aria-controls="deliveryOffcanvas" aria-label="Toggle navigation">
+                            <h6 class="mb-0">Dilivery</h6>
+                            <span class="fs-6 text-secondary underline-animation">Set your address<i
+                                    class="bi bi-chevron-down ms-2"></i></span>
+                        </button>
+
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="deliveryOffcanvas"
+                            aria-labelledby="deliveryOffcanvasLabel" style="width: 450px;">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="deliveryOffcanvasLabel">Delivery Options</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="mx-3 text-nowrap">
+                                <button class="bg-white rounded-pill px-5 py-2 border-1 w-50"><i
+                                        class="bi bi-bag-heart-fill mx-2"></i>Dilivery</button>
+                                <button class="bg-white rounded-pill px-5 py-2 border-1 w-50"><i
+                                        class="bi bi-box mx-2"></i>Pickup</button>
+                            </div>
+
+                            <div class="offcanvas-body ml-3">
+                                <div class="show_address active ">
+                                    <div class="form-check py-4 border-bottom">
+                                        <input class="form-check-input" type="radio" name="radioDefault"
+                                            id="radioDefault1">
+                                        <label class="form-check-label" for="radioDefault1">
+                                            567 Cherry Lane Apt B12 Sacramento, 95829
+                                        </label>
+                                    </div>
+                                    <div class="form-check py-4 border-bottom">
+                                        <input class="form-check-input" type="radio" name="radioDefault"
+                                            id="radioDefault1">
+                                        <label class="form-check-label" for="radioDefault1">
+                                            1901 Thornridge Cir. Shiloh, Hawaii,81063
+                                        </label>
+                                    </div>
+                                    <div class="form-check py-4 border-bottom">
+                                        <input class="form-check-input" type="radio" name="radioDefault"
+                                            id="radioDefault2" checked>
+                                        <label class="form-check-label" for="radioDefault2">
+                                            517 W. Gray St. Utica,Pennsylvania, 57867
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion accordion-flush" id="addDeliveryAcc">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button id="show_address"
+                                                class="accordion-button m-0 collapsed bg-transparent" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Add delivery address
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#addDeliveryAcc">
+                                            <div class="accordion-body">
+                                                <div class="d-flex  justify-content-between">
+                                                    <h6 class="text-nowrap m-0">Add an address to start ordering</h6>
+                                                    <button type="button"
+                                                        class="btn btn-outline-danger btn-sm rounded-5 text-nowrap py-1"><i
+                                                            class="bi bi-geo-alt"></i>Find on map</button>
+                                                </div>
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1"
+                                                            class="form-label">State*</label>
+                                                        <input class="form-control rounded-5" id="exampleInputEmail1"
+                                                            aria-describedby="emailHelp" placeholder="Select State">
+
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1"
+                                                            class="form-label">Postcode*</label>
+                                                        <input class="form-control rounded-5" id="exampleInputEmail1"
+                                                            aria-describedby="emailHelp">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">city*</label>
+                                                        <input class="form-control rounded-5" id="exampleInputEmail1"
+                                                            aria-describedby="emailHelp" placeholder="Select City">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1"
+                                                            class="form-label">Address*</label>
+                                                        <input class="form-control rounded-5" id="exampleInputEmail1"
+                                                            aria-describedby="emailHelp">
+                                                    </div>
+                                                    <div class="sticky-bottom bg-white">
+                                                        <button type="button"
+                                                            class="btn btn-danger w-100 rounded-5 ">Confirm
+                                                            order</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 gap-lg-4 align-items-center ">
+                        <button class="bg-transparent border-0 p-0  fs-5 fw-bold text-dark nav-icons">
+                            <i class="bi bi-sun"></i>
+                        </button>
+
+                        <button class="bg-transparent border-0 p-0 d-block d-xl-none  fs-5 fw-bold text-dark nav-icons"
+                            type="button" data-bs-toggle="offcanvas" data-bs-target="#deliveryOffcanvas"
+                            aria-controls="deliveryOffcanvas" aria-label="Toggle navigation">
+                            <i class="bi bi-geo-alt"></i>
+                        </button>
+
+                        <a href="javascript:void(0)" class="search_toggle d-block d-md-none text-dark fs-5">
+                            <i class="bi bi-search"></i>
+                        </a>
+
+                        <button
+                            class="bg-transparent border-0 p-0  fs-5 fw-bold  d-none d-md-block text-dark nav-icons">
+                            <i class="bi bi-person"></i>
+                        </button>
+
+                        <button
+                            class="bg-transparent border-0 p-0  fs-5 fw-bold  text-dark position-relative nav-icons">
+                            <i class="bi bi-cart2"></i>
+                            <div class="position-absolute top-0 start-100 translate-middle mt-1">
+                                <i class="bi bi-8-circle-fill text-danger fs-6"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!--End: Categories dropdown -->
+            <div class="">
+                <div class="flex-grow-1  mx-auto position-relative d-none d-md-none search_wrap_sm">
+                    <input class="form-control  py-2 rounded-5 nav-search  " type="search"
+                        placeholder="Search for products " aria-label="Search" />
+                    <div class="position-absolute top-50 end-0 translate-middle-y me-3 text-secondary fs-6">
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Start: header left sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Browse Cartzilla
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+
+                    <div class="d-lg-none ">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary rounded-pill fw-medium py-2" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span><i class="bi bi-grid "></i></span>
+                                <span>Categories</span>
+                                <span class="ps-4"><i class="bi bi-chevron-down"></i></span>
+                            </button>
+                            <div class="dropdown-menu w-100">
+                                <ul>
+                                    <ul class="list-unstyled py-3 lh-lg">
+                                        <h6>Bakery & bread</h5>
+                                            <li>Shop all</li>
+                                            <li>Bread</li>
+                                            <li>Pastries</li>
+                                            <li>Bakery cookies</li>
+                                            <li>Cupcakes</li>
+                                            <li>Buns & rolls</li>
+                                    </ul>
+
+                                    <ul class="list-unstyled py-3 lh-lg">
+                                        <h6>Meat products</h5>
+                                            <li>Shop all</li>
+                                            <li>Fresh meat</li>
+                                            <li>Processed meat</li>
+                                            <li>Seafood</li>
+                                            <li>Poultry products</li>
+                                            <li>Prepared meat</li>
+                                    </ul>
+
+                                    <ul class="list-unstyled py-3 lh-lg">
+                                        <h6>Vegetables</h5>
+                                            <li>Shop all</li>
+                                            <li>Leafy greens</li>
+                                            <li>Root vegetables</li>
+                                            <li>Allium vegetables</li>
+                                            <li>peppers and tomatoes</li>
+                                            <li>Cruciferous</li>
+                                            <li>Seasonal squashes</li>
+                                            <li>Beans,peas & lentils</li>
+                                    </ul>
+
+                                    <ul class="list-unstyled py-3 lh-lg">
+                                        <h6>Sauces and ketchup</h5>
+                                            <li>Shop all</li>
+                                            <li>Tomato-based sauces</li>
+                                            <li>Salad dressing</li>
+                                            <li>Hot sauces</li>
+                                    </ul>
+
+                                    <ul class="list-unstyled py-3 lh-lg">
+                                        <h6>Fresh fruits</h5>
+                                            <li>Shop all</li>
+                                            <li>Citrus fruits</li>
+                                            <li>Berries</li>
+                                            <li>Tropical fruits</li>
+                                            <li>Stone fruits</li>
+                                            <li>Exotic fruits</li>
+                                            <li>Melons</li>
+                                    </ul>
+
+                                    <ul class="list-unstyled py-3 lh-lg">
+                                        <h6>Italian dinner</h5>
+                                            <li>Shop all</li>
+                                            <li>Pasta & sauces</li>
+                                            <li>Italian meats</li>
+                                            <li>Italian chesse</li>
+                                            <li>Desserts & breverages</li>
+
+                                    </ul>
+
+                                    <ul class="list-unstyled py-3 lh-lg">
+                                        <h6>Beverages</h5>
+                                            <li>Shop all</li>
+                                            <li>Soft drinks</li>
+                                            <li>Juices</li>
+                                            <li>Sports & energy Drinks</li>
+                                            <li>Tea & coffee</li>
+                                            <li>Alcoholic beverages</li>
+                                    </ul>
+
+                                    <ul class="list-unstyled py-3 lh-lg">
+                                        <h6>Dairy & eggs</h5>
+                                            <li>Shop all</li>
+                                            <li>Chessee</li>
+                                            <li>Milk & yogurt</li>
+                                            <li>Bakery cookies</li>
+                                            <li>Cupcakes</li>
+                                            <li>Buns & rolls</li>
+                                    </ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion accordion-flush" id="mainMeuAcc">
+                        <div class="accordion-item border-0 ">
+                            <h2 class="accordion-header ">
+                                <button class="accordion-button collapsed fw-medium bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Home
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne"
+                                class="accordion-collapse collapse border border-light-subtle ms-3 rounded-3 "
+                                data-bs-parent="#mainMeuAcc">
+                                <ul class="list-unstyled ms-5 py-2 ">
+                                    <li class="py-2">Electronics Store</li>
+                                    <li class="py-2">Fashion Store v.1</li>
+                                    <li class="py-2">Fashion Store v.2</li>
+                                    <li class="py-2">Grocery Store</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-medium bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    shop
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo"
+                                class="accordion-collapse collapse border border-light-subtle rounded-3 ms-3"
+                                data-bs-parent="#mainMeuAcc">
+                                <ul class="list-unstyled ms-5 py-2 ">
+                                    <li class="py-2">Electronics Store</li>
+                                    <li class="py-2">Fashion Store v.1</li>
+                                    <li class="py-2">Fashion Store v.2</li>
+                                    <li class="py-2">Grocery Store</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-bottom-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-medium bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapsethree"
+                                    aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Account
+                                </button>
+                            </h2>
+                            <div id="flush-collapsethree"
+                                class="accordion-collapse collapse border border-light-subtle rounded-3 ms-3"
+                                data-bs-parent="#mainMeuAcc">
+                                <ul class="list-unstyled ms-5 py-2 ">
+                                    <li class="py-2">Electronics Store</li>
+                                    <li class="py-2">Fashion Store v.1</li>
+                                    <li class="py-2">Fashion Store v.2</li>
+                                    <li class="py-2">Grocery Store</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-bottom-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-medium bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Pages
+                                </button>
+                            </h2>
+                            <div id="flush-collapsefour"
+                                class="accordion-collapse collapse border border-light-subtle rounded-3 ms-3"
+                                data-bs-parent="#mainMeuAcc">
+                                <ul class="list-unstyled ms-5 py-2 ">
+                                    <li class="py-2">Electronics Store</li>
+                                    <li class="py-2">Fashion Store v.1</li>
+                                    <li class="py-2">Fashion Store v.2</li>
+                                    <li class="py-2">Grocery Store</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn fw-medium" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Docs
+                        </button>
+                    </div>
+
+                    <div>
+                        <button class="btn fw-medium" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Components
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End: header left sidebar -->
+
+    <!--Start: category menu-->
+    <div class="overflow-x-auto">
+        <div class="container text-center py-4">
+            <div class="d-flex justify-content-between">
+
+                <div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="bg-secondary-subtle nav-pic">
+                            <i class="bi bi-percent text-danger"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-nowrap underline-animation">Weekly sale</h6>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="bg-secondary-subtle nav-pic">
+                            <img src="Image/nav1.webp" width="30">
+                        </div>
+                        <div>
+                            <h6 class="underline-animation">Vegetables
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="bg-secondary-subtle nav-pic">
+                            <img src="Image/nav2.webp" width="30">
+                        </div>
+                        <div>
+                            <h6 class="text-nowrap underline-animation">Easter is coming
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="bg-secondary-subtle nav-pic">
+                            <img src="Image/nav3.webp" width="30">
+                        </div>
+                        <div>
+                            <h6 class="text-nowrap underline-animation">Poultry meat
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="bg-secondary-subtle nav-pic">
+                            <img src="Image/nav4.webp" width="30">
+                        </div>
+                        <div>
+                            <h6 class="text-nowrap underline-animation">Fresh fruits
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="bg-secondary-subtle nav-pic">
+                            <img src="Image/nav5.webp" width="30">
+                        </div>
+                        <div>
+                            <h6 class="text-nowrap underline-animation">St. Patrick's day
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="bg-secondary-subtle nav-pic">
+                            <img src="Image/nav6.webp" width="30">
+                        </div>
+                        <div>
+                            <h6 class="text-nowrap underline-animation">Exotic fruits
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- End: menu -->
+
+    <!--Start:Banner -->
+    <div id="groceryBannerCarousel" class=" carousel slide banner-Items" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#groceryBannerCarousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#groceryBannerCarousel" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#groceryBannerCarousel" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
 
-        <!-- Search -->
-        <div class=" flex-grow-1 max-w-500 mx-auto position-relative d-none d-md-block">
-          <input class="form-control  py-2 rounded-5 nav-search  " type="search" placeholder="Search for products "
-            aria-label="Search" />
-          <div class="position-absolute top-50 end-0 translate-middle-y me-3">
-            <i class="bi bi-search"></i>
-          </div>
+        <div class="carousel-inner  h-100">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active h-100">
+                <img src="Image/banner1.webp" class="d-block w-100 h-100 object img-fluid" alt="Healthy Food">
+                <div class="carousel-caption text-start d-flex align-items-center h-100 w-100 banner ">
+                    <div class="container">
+                        <p class="fs-5 mb-2">🔥 Free shipping — order over $50</p>
+                        <h1 class="display-4 fw-semibold">Healthy Food<br>Available To Everyone</h1>
+                        <a href="#" class="btn btn-outline-light rounded-pill">Shop now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item h-100">
+                <img src="Image/banner2.webp" class="d-block w-100 h-100 object img-fluid" alt="Organic Eggs">
+                <div class="carousel-caption text-start d-flex align-items-center h-100 w-100 banner ">
+                    <div class="container">
+                        <p class="fs-5 mb-2">🥚 Organic products to your table</p>
+                        <h1 class="display-4 fw-semibold">Organic Eggs From<br>Home-Grown Chicken</h1>
+                        <a href="#" class="btn btn-outline-light rounded-pill ">Shop now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item h-100">
+                <img src="Image/banner3.webp" class="d-block w-100 h-100 object img-fluid" alt="Fresh Drinks">
+                <div class="carousel-caption  text-start d-flex align-items-center h-100 w-100 banner">
+                    <div class="container">
+                        <p class="fs-5 mb-2">🥝 Only natural ingredients</p>
+                        <h1 class="display-4 fw-semibold">Everything Refreshing<br>Fresh Drinks</h1>
+                        <a href="#" class="btn btn-outline-light rounded-pill ">Shop now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--End:banner-->
+
+    <!--cards-->
+    <div class="container">
+        <div class="cardsItems m-5">
+
+            <div class="px-3">
+                <div class="card mb-3 border-0 rounded-4 card-bg ">
+                    <div class="d-flex ">
+                        <div class="d-flex flex-column justify-content-center p-3">
+                            <div>
+                                <p class="text-nowrap ">28 products</p>
+                                <h5 class="card-title ">Berries from the garden</h5>
+                                <span class=" border-0 text-start text-nowrap underline-animation"> shop now<i
+                                        class="bi bi-chevron-right ms-2"></i></span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-end">
+                            <img src="Image/01.webp" class="img-card rounded-end-4" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-3">
+                <div class="card mb-3  border-0 rounded-4 card-2 ">
+                    <div class="d-flex ">
+                        <div class="d-flex  flex-column justify-content-center p-3">
+                            <div>
+                                <p class="text-nowrap">97 products</p>
+                                <h5 class="card-title ">Products for Easter table</h5>
+                                <span class=" border-0 text-nowrap underline-animation"> shop now<i
+                                        class="bi bi-chevron-right ms-2"></i></span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-end">
+                            <img src="Image/02.webp" alt="..." class="img-card rounded-end-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-3">
+                <div class="card mb-3 border-0 rounded-4 card-3 ">
+                    <div class="d-flex ">
+                        <div class="d-flex flex-column justify-content-center p-3">
+                            <div>
+                                <p class="text-nowrap">28 products</p>
+                                <h5 class="card-title ">Berries from the garden</h5>
+                                <span class=" border-0 text-nowrap underline-animation"> shop now<i
+                                        class="bi bi-chevron-right ms-2"></i></span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-end">
+                            <img src="Image/03.webp" class="img-card rounded-end-4" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Card:End-->
+
+    <!--Start:product-->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3 col">
+                <div class=" border-bottom pb-4 m-2">
+                    <h4>Categories</h4>
+                </div>
+
+                <div class="row  flex-md-column gap-3 mt-4">
+
+                    <div class=" col">
+                        <div class="d-flex gap-3 align-items-center ">
+                            <div class="bg-secondary-subtle cat-pic">
+                                <img src="Image/catlog 1.webp" width="40">
+                            </div>
+                            <div class="text-nowrap">
+                                <h6 class="underline-animation">Bakery & bread</h6>
+                                <p>230 products</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="bg-secondary-subtle cat-pic">
+                                <img src="Image/catlog 2.webp" width="40">
+                            </div>
+                            <div class="text-nowrap">
+                                <h6 class="underline-animation">Vegetables</h6>
+                                <p>180 products</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="bg-secondary-subtle cat-pic">
+                                <img src="Image/catlog 3.webp" width="40">
+                            </div>
+                            <div class="text-nowrap">
+                                <h6 class="underline-animation">Fresh fruits</h6>
+                                <p>205 products</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="bg-secondary-subtle cat-pic">
+                                <img src="Image/catlog4.webp" width="40">
+                            </div>
+                            <div class="text-nowrap">
+                                <h6 class="underline-animation">Meet Italian dinner</h6>
+                                <p>309 products</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="bg-secondary-subtle cat-pic">
+                                <img src="Image/catlog5.webp" width="40">
+                            </div>
+                            <div class="text-nowrap">
+                                <h6 class="underline-animation">Beverages</h6>
+                                <p>374 products</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="bg-secondary-subtle cat-pic">
+                                <img src="Image/catlog6.webp" width="40">
+                            </div>
+                            <div class="text-nowrap">
+                                <h6 class="underline-animation">Meat products</h6>
+                                <p>124 products</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="bg-secondary-subtle cat-pic">
+                                <img src="Image/catlog7.webp" width="40">
+                            </div>
+                            <div class="text-nowrap">
+                                <h6 class="underline-animation">Sauces and Ketchup</h6>
+                                <p>219 products</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="bg-secondary-subtle cat-pic">
+                                <img src="Image/catlog8.webp" width="40">
+                            </div>
+                            <div class="text-nowrap">
+                                <h6 class="underline-animation">Dairy and eggs</h6>
+                                <p>146 products</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-9  ">
+                <div class="d-flex justify-content-between border-bottom pb-4 m-2 mb-4">
+                    <h4>Popular Products</h4>
+                    <span>View all <i class="bi bi-chevron-right"></i></span>
+                </div>
+                <div class="row g-3">
+                    <!--1-->
+                    <div class="col-lg-3 col whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/p.1.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$2.15</h6>
+                                <p class="underline">Muesli Fitness Energy,gluten free</p>
+                                <p class="text-secondary">500g</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--2-->
+                    <div class="col-lg-3 col whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/p2.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$3.12</h6>
+                                <p class="underline">Fresh orange Klementina,spain</p>
+                                <p class="text-secondary">1kg</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--3-->
+                    <div class="col-lg-3 col whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/p3.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$0.80</h6>
+                                <p class="underline">Pepsi soda classic,can</p>
+                                <p class="text-secondary">300ml</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--4-->
+                    <div class="col-lg-3 col whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/p4.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$2.99</h6>
+                                <p class="underline">Mozzarella mini cheese Granaloro</p>
+                                <p class="text-secondary">250g</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--5-->
+                    <div class="col-lg-3 col whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/p5.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$1.24</h6>
+                                <p class="underline">Coconut,Indonesia</p>
+                                <p class="text-secondary">1 coconut</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--6-->
+                    <div class="col-lg-3 col whole-product">
+                        <div class="card product border border-0">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/p6.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$3.95</h6>
+                                <p class="underline">Pesto sauce Barilla with basik,Italy</p>
+                                <p class="text-secondary">200g</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--7-->
+                    <div class="col-lg-3 col whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/p7.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$1.99</h6>
+                                <p class="underline">Fresh mango,Spain</p>
+                                <p class="text-secondary">1 Mango</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--8-->
+                    <div class="col-lg-3 col whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/p8.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6>$2.40</h6>
+                                <p class="underline">Fresh green asparagus,bunch</p>
+                                <p class="text-secondary">300g</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--End:product-->
+
+    <!--svg-->
+    <div class="container">
+        <h3 class="text-center m-5">Shop By Lifestyle</h2>
+
+            <div class="svgItems row mb-5">
+
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-center">
+                        <div class="svg-1 mb-4 d-flex align-items-center justify-content-center ">
+                            <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76"
+                                viewBox="0 0 76 76" fill="none">
+                                <path
+                                    d="M62.631 13.369l-7.214 7.214M20.583 55.417l-7.214 7.214M38 51.037c0-11.315-13.926-11.315-13.926-11.315s0 13.926 11.315 13.926H38m0-2.611v2.611m0-2.611c0-11.315 13.926-11.315 13.926-11.315s0 13.926-11.315 13.926H38m0-14.222c0-11.315-13.926-11.315-13.926-11.315s0 13.926 11.315 13.926H38m0-2.611v2.611m0-2.611c0-11.315 13.926-11.315 13.926-11.315s0 13.926-11.315 13.926H38m0 18.585v-6.967M72.833 38c0 19.238-15.595 34.833-34.833 34.833S3.167 57.238 3.167 38 18.762 3.167 38 3.167 72.833 18.762 72.833 38zM38 15.378s9.847 9.849 1.846 17.849L38 35.074l-1.846-1.847C28.153 25.227 38 15.378 38 15.378z"
+                                    stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center d-flex flex-column align-items-center">
+                        <h4 class="underline-animation ">Gluten-Free</h4>
+                        <p class="text-secondary">Foods that don't contain gluten</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-center">
+                        <div class=" mb-4 d-flex align-items-center justify-content-center svg-2">
+                            <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76"
+                                viewBox="0 0 76 76" fill="none">
+                                <g stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10">
+                                    <g stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M16.842 37.347c5.205 6.789 12.251 18.802 12.251 36.436h17.812c0-17.634 7.066-29.648 12.251-36.436m-7.599-3.958c-3.048 4.71-6.452 10.984-9.084 18.565V32.142">
+                                        </path>
+                                        <path d="M33.547 32.162v19.811c-2.632-7.56-6.036-13.834-9.104-18.584"></path>
+                                    </g>
+                                    <path
+                                        d="M62.502 15.577c-.079 0-.139.02-.218.02-1.029-5.086-5.522-8.926-10.905-8.926-1.405 0-2.731.297-3.958.752-1.979-3.127-5.423-5.205-9.401-5.205-3.958 0-7.422 2.098-9.401 5.205-1.227-.475-2.553-.752-3.958-.752-5.403 0-9.896 3.84-10.905 8.926-.079 0-.139-.02-.218-.02-6.155 0-11.281 4.988-11.281 11.143s5.126 11.143 11.281 11.143c3.76 0 7.046-1.88 9.045-4.73.673.158 1.366.277 2.078.277 2.692 0 5.067-1.207 6.709-3.107 1.623 1.88 3.978 3.107 6.65 3.107s5.027-1.227 6.65-3.107c1.643 1.88 4.018 3.107 6.709 3.107.712 0 1.405-.099 2.078-.277 2.019 2.85 5.304 4.73 9.045 4.73 6.155 0 11.281-4.987 11.281-11.143s-5.126-11.143-11.281-11.143z"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center d-flex flex-column align-items-center">
+                        <h4 class="underline-animation">Vegan</h4>
+                        <p class="text-secondary">Vegetable based goodness</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-center">
+                        <div class="mb-4 d-flex align-items-center justify-content-center svg-3">
+                            <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76"
+                                viewBox="0 0 76 76" fill="none">
+                                <path d="M9.5 72.8336C9.5 72.8336 9.875 42.7074 38 34.8336" stroke="currentColor"
+                                    stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round"></path>
+                                <path
+                                    d="M11.1264 58.4427C7.13273 49.8272 -11.3834 1.3653 66.3117 6.74996C67.4008 6.74996 68.49 7.82689 68.8531 8.90382C70.6684 18.9552 74.6621 64.1863 13.6678 59.8786C12.2156 59.8786 11.4895 59.5196 11.1264 58.4427Z"
+                                    stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center d-flex flex-column align-items-center">
+                        <h4 class="underline-animation">Plant base</h4>
+                        <p class="text-secondary">Based on herbal ingredients</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-center">
+                        <div class="mb-4 d-flex align-items-center justify-content-center svg-4 ">
+                            <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76"
+                                viewBox="0 0 76 76" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-miterlimit="10" stroke-linejoin="round">
+                                <path
+                                    d="M58.59 33.535c-2.219-3.028-3.595-6.515-4.043-10.133-1.227-9.91-7.437-16.42-6.862-15.718-4.878-5.956-14.1-6.035-19.083-.163-4.128 4.863-6.442 10.345-7.191 16.12-.454 3.502-1.759 6.871-3.919 9.785-3.034 4.093-4.824 9.13-4.824 14.577 0 13.7 11.607 24.962 25.584 24.829 13.876-.132 25.083-11.198 25.083-24.829 0-5.399-1.758-10.395-4.744-14.469z">
+                                </path>
+                                <path
+                                    d="M48.871 48.815c0 5.885-4.867 10.655-10.871 10.655S27.129 54.7 27.129 48.815 31.996 34.495 38 34.495s10.871 8.435 10.871 14.32z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center d-flex flex-column align-items-center">
+                        <h4 class="underline-animation">Keto</h4>
+                        <p class="text-secondary">Good fat served in food</p>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    <!--End:svg-->
+
+    <!--Special Products-->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-3 col-xxl-3 col ">
+                <div class="card last-card border-0 ">
+                    <img src="Image/banner.webp" class="card-img-bottom order-2 rounded-bottom-4" alt="...">
+                    <div class="card-body order-1 card-sp rounded-top-4">
+                        <h4 class="card-title">Make Breakfast Easy and Healthy</h4>
+                        <span class="underline-animation">Shop now <i class="bi bi-chevron-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-9 col-xxl-9 col  ">
+                <div class="d-flex justify-content-between border-bottom pb-4 m-2 mb-4">
+                    <h4>Special Products</h4>
+                    <span class="underline-animation">View all <i class="bi bi-chevron-right"></i></span>
+                </div>
+                <div class="specialProducts">
+                    <!--1-->
+                    <div class="m-2  whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/sp-1.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$2.15</h6>
+                                <p class="underline">Muesli Fitness Energy,gluten free</p>
+                                <p class="text-secondary">500g</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--2-->
+                    <div class="m-2 whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/sp2.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$3.12</h6>
+                                <p class="underline">Fresh orange Klementina,spain</p>
+                                <p class="text-secondary">1kg</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--3-->
+                    <div class="m-2 whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/sp3.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$0.80</h6>
+                                <p class="underline">Pepsi soda classic,can</p>
+                                <p class="text-secondary">300ml</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--4-->
+                    <div class="m-2 whole-product">
+                        <div class="card product border border-0 ">
+                            <div class="position-relative">
+                                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
+                                <img src="Image/sp4.webp" class="card-img-top product-img" alt="...">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign">
+                                    <i class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">$2.99</h6>
+                                <p class="underline">Mozzarella mini cheese Granaloro</p>
+                                <p class="text-secondary">250g</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--End:Special Product-->
+
+    <!--Start:blog-->
+    <div class="container">
+        <div class="row">
+
+            <h2>Recipes</h2>
+
+
+            <div class="col-lg-5 mt-4 mb-5">
+                <div class="row g-3">
+                    <!-- Recipe 1 -->
+                    <div class="col-12">
+                        <div class="card border-0 h-100">
+                            <div class="row g-0 h-100">
+                                <div class="col-4">
+                                    <img src="Image/recipie1.webp" class="img-fluid h-100 rounded-start blog-img"
+                                        alt="...">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                                        <h6 class="card-title mb-2 underline">Garden salad with a mix of lettuce,
+                                            cucumber and tomato</h6>
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipe 2 -->
+                    <div class="col-12">
+                        <div class="card border-0 h-100">
+                            <div class="row g-0 h-100">
+                                <div class="col-4">
+                                    <img src="Image/reciepie2.webp" class="img-fluid h-100 rounded-start blog-img"
+                                        alt="...">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                                        <h6 class="card-title mb-2 underline">Raspberry fresh lemonade with lemon,
+                                            strawberry syrup and mint
+                                        </h6>
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipe 3 -->
+                    <div class="col-12">
+                        <div class="card border-0 h-100">
+                            <div class="row g-0 h-100">
+                                <div class="col-4">
+                                    <img src="Image/reciepe3.webp" class="img-fluid h-100 rounded-start blog-img"
+                                        alt="...">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                                        <h6 class="card-title mb-2 underline">Penne pasta with spinach and zucchini in a
+                                            creamy sauce</h6>
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <button class="btn  p-0 underline-animation">View all <i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="border border-1 p-4 rounded-2 ">
+                    <div class="d-flex ">
+                        <div>
+                            <img src="Image/book-cover.webp" class="rounded-2 img-fluid">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center p-4  ">
+                            <h4>The Best in Gastronomy</h4>
+                            <p>Author:<span>Dana Chambers</span></p>
+                            <p>An exquisite cookbook that takes readers on a culinary journey around the world. With
+                                stunning
+                                photography and detailed instructions ...</p>
+                            <h4>$12.40</h4>
+                            <button type="button" class="btn btn-dark rounded-pill">Shop Book
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!--End:blog-->
+
+    <!--bootom cards-->
+    <div class="container ">
+        <div class="m-4">
+            <div class="row">
+                <div class="col-12 col-lg-7">
+                    <div class="card mb-3 bg-secondary-subtle border-0 ">
+                        <div class="d-flex flex-column-reverse flex-sm-row ">
+                            <div class="   ">
+                                <img src="Image/last1.webp" class=" card-img " alt="...">
+                            </div>
+                            <div class="d-flex align-items-center p-3">
+                                <div class="">
+                                    <h4 class="card-title">Make online shop easier with our Cartzilla App</h5>
+                                        <button type="button" class="btn btn-light rounded-pill m-3 py-2"><i
+                                                class="bi bi-google-play"></i>
+                                            Google
+                                            Play</button>
+                                        <button type="button" class="btn btn-light rounded-pill py-2 "><i
+                                                class="bi bi-apple"></i> Apple
+                                            Store</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-5 ">
+                    <div class=" mb-3 bg-secondary-subtle border-0 rounded-3">
+                        <div class="d-flex flex-column-reverse flex-sm-row ">
+                            <div class="">
+                                <img src="Image/last2.webp" class="card-img" alt="...">
+                            </div>
+                            <div class="d-flex align-items-center p-3">
+                                <div class="">
+                                    <h4 class="card-title">We'd love to hear what you think!</h5>
+                                        <button type="button" class="btn border-0 underline-animation"> Give a Feedback
+                                            <i class="bi bi-chevron-right fs-6"></i></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <!-- header right -->
-        <div class="d-flex gap-3 align-items-center">
-          <div class="d-none d-xl-block pe-5">
-            <button class="d-flex flex-column align-items-start border-0 bg-transparent justify-content-start"
-              type="button" data-bs-toggle="offcanvas" data-bs-target="#deliveryOffcanvas"
-              aria-controls="deliveryOffcanvas" aria-label="Toggle navigation">
-              <h6 class="mb-0">Dilivery</h6>
-              <span class="fs-6 text-secondary underline-animation">Set your address<i class="bi bi-chevron-down"></i></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="deliveryOffcanvas"
-              aria-labelledby="deliveryOffcanvasLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="deliveryOffcanvasLabel">Delivery Options</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <ul class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </div>
+    <!--End:bootom cards-->
+
+    <!--Start:footer-->
+    <footer class="footer-bg text-white ">
+        <!--Above section-->
+        <div class="container py-5 border-bottom">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <h1>Stay in touch with us</h1>
+                <p>Receive the latest updates about our products & promotions</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+                <input class="form-control max-w-500 py-2  rounded-5 bg-transparent email-text text-white" type="email"
+                    placeholder="Your email" aria-label="email" />
+                <button type="button" class="btn btn-danger rounded-pill px-4">Subscribe</button>
+            </div>
+        </div>
+        <!--below section-->
+        <div class="container text-start py-5">
+            <div class="row align-items-start justify-content-start">
+
+                <div class="col-xl-4 pb-sm-5">
+                    <div class="text-sm-center text-xl-start ">
+                        <h4>Cartzilla</h4>
+                        <p>With a wide selection of fresh produce, pantry staples, and household essentials, we've got
+                            all you need
+                            just a click away.</p>
+                        <div>
+                            <span><i class="bi bi-instagram px-3"></i></span>
+                            <span><i class="bi bi-facebook px-3"></i></span>
+                            <span><i class="bi bi-telegram px-3"></i></span>
+                            <span><i class="bi bi-whatsapp px-3"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=" col-xl-2 col-sm-3 text-lg-center d-none d-sm-block">
+                    <ul class="list-unstyled lh-lg d-flex flex-column justify-content-start align-items-start">
+                        <h5>Categories</h5>
+                        <li class="underline-animation">Weekly sale</li>
+                        <li class="underline-animation"> special price</li>
+                        <li class="underline-animation"> Easter is coming</li>
+                        <li class="underline-animation">Italian dinner</li>
+                        <li class="underline-animation">Fresh fruits</li>
+                        <li class="underline-animation">Exotic fruits</li>
                     </ul>
-                  </ul>
-                  <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-              </div>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3 gap-lg-4 align-items-center ">
-            <button class="bg-transparent border-0 p-0  fs-5 fw-bold text-dark nav-icons">
-              <i class="bi bi-sun"></i>
-            </button>
-
-            <a href="javascript:void(0)" class="search_toggle d-block d-md-none text-dark fs-5">
-              <i class="bi bi-search"></i>
-            </a>
-
-            <button class="bg-transparent border-0 p-0 d-block d-xl-none  fs-5 fw-bold text-dark nav-icons">
-              <i class="bi bi-geo-alt"></i>
-            </button>
-
-            <button class="bg-transparent border-0 p-0  fs-5 fw-bold  d-none d-md-block text-dark nav-icons">
-              <i class="bi bi-person"></i>
-            </button>
-
-            <button class="bg-transparent border-0 p-0  fs-5 fw-bold  text-dark position-relative nav-icons">
-              <i class="bi bi-cart2"></i>
-              <div class="position-absolute top-0 start-100 translate-middle mt-1">
-                <i class="bi bi-8-circle-fill text-danger fs-6"></i>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="">
-        <div class="flex-grow-1  mx-auto position-relative d-none d-md-none search_wrap_sm">
-          <input class="form-control  py-2 rounded-5 nav-search  " type="search" placeholder="Search for products "
-            aria-label="Search" />
-          <div class="position-absolute top-50 end-0 translate-middle-y me-3 text-secondary fs-6">
-            <i class="bi bi-search"></i>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Start: header left sidebar -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-        Browse Cartzilla
-      </h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        <li class="nav-item">
-
-          <div class="d-lg-none ">
-            <div class="dropdown">
-              <button class="btn btn-secondary rounded-pill fw-medium py-2" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span><i class="bi bi-grid "></i></span>
-                <span>Categories</span>
-                <span class="ps-4"><i class="bi bi-chevron-down"></i></span>
-              </button>
-              <div class="dropdown-menu w-100">
-                <ul>
-                  <ul class="list-unstyled py-3 lh-lg">
-                    <h6>Bakery & bread</h5>
-                      <li>Shop all</li>
-                      <li>Bread</li>
-                      <li>Pastries</li>
-                      <li>Bakery cookies</li>
-                      <li>Cupcakes</li>
-                      <li>Buns & rolls</li>
-                  </ul>
-
-                  <ul class="list-unstyled py-3 lh-lg">
-                    <h6>Meat products</h5>
-                      <li>Shop all</li>
-                      <li>Fresh meat</li>
-                      <li>Processed meat</li>
-                      <li>Seafood</li>
-                      <li>Poultry products</li>
-                      <li>Prepared meat</li>
-                  </ul>
-
-                  <ul class="list-unstyled py-3 lh-lg">
-                    <h6>Vegetables</h5>
-                      <li>Shop all</li>
-                      <li>Leafy greens</li>
-                      <li>Root vegetables</li>
-                      <li>Allium vegetables</li>
-                      <li>peppers and tomatoes</li>
-                      <li>Cruciferous</li>
-                      <li>Seasonal squashes</li>
-                      <li>Beans,peas & lentils</li>
-                  </ul>
-
-                  <ul class="list-unstyled py-3 lh-lg">
-                    <h6>Sauces and ketchup</h5>
-                      <li>Shop all</li>
-                      <li>Tomato-based sauces</li>
-                      <li>Salad dressing</li>
-                      <li>Hot sauces</li>
-                  </ul>
-
-                  <ul class="list-unstyled py-3 lh-lg">
-                    <h6>Fresh fruits</h5>
-                      <li>Shop all</li>
-                      <li>Citrus fruits</li>
-                      <li>Berries</li>
-                      <li>Tropical fruits</li>
-                      <li>Stone fruits</li>
-                      <li>Exotic fruits</li>
-                      <li>Melons</li>
-                  </ul>
-
-                  <ul class="list-unstyled py-3 lh-lg">
-                    <h6>Italian dinner</h5>
-                      <li>Shop all</li>
-                      <li>Pasta & sauces</li>
-                      <li>Italian meats</li>
-                      <li>Italian chesse</li>
-                      <li>Desserts & breverages</li>
-
-                  </ul>
-
-                  <ul class="list-unstyled py-3 lh-lg">
-                    <h6>Beverages</h5>
-                      <li>Shop all</li>
-                      <li>Soft drinks</li>
-                      <li>Juices</li>
-                      <li>Sports & energy Drinks</li>
-                      <li>Tea & coffee</li>
-                      <li>Alcoholic beverages</li>
-                  </ul>
-
-                  <ul class="list-unstyled py-3 lh-lg">
-                    <h6>Dairy & eggs</h5>
-                      <li>Shop all</li>
-                      <li>Chessee</li>
-                      <li>Milk & yogurt</li>
-                      <li>Bakery cookies</li>
-                      <li>Cupcakes</li>
-                      <li>Buns & rolls</li>
-                  </ul>
-
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="dropdown">
-            <button class="btn d-flex justify-content-between align-items-center w-100" type="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Home
-              <span><i class="bi bi-chevron-down"></i></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <h6>Electrical Store</h6>
-                <p>Megamenu +Hero slider </p>
-              </li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-
-          <div class="dropdown ">
-            <button class="btn d-flex justify-content-between align-items-center w-100 " type="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Shop
-              <span><i class="bi bi-chevron-down"></i></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <h6>Electrical Store</h6>
-                <p>Megamenu +Hero slider </p>
-              </li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-
-          <div class="dropdown">
-            <button class="btn d-flex justify-content-between align-items-center w-100 " type="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Account
-              <span><i class="bi bi-chevron-down"></i></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <h6>Electrical Store</h6>
-                <p>Megamenu +Hero slider </p>
-              </li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-
-          <div class="dropdown">
-            <button class="btn d-flex justify-content-between align-items-center w-100 " type="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Pages
-              <span><i class="bi bi-chevron-down"></i></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <h6>Electrical Store</h6>
-                <p>Megamenu +Hero slider </p>
-              </li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-
-          <div>
-            <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Docs
-            </button>
-          </div>
-
-          <div>
-            <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Components
-            </button>
-          </div>
-
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- End: header left sidebar -->
-
-  <!--Start: category menu-->
-  <div class="overflow-x-auto">
-    <div class="container text-center py-4">
-      <div class="d-flex justify-content-between">
-
-        <div>
-          <div class="d-flex gap-2 align-items-center">
-            <div class="bg-secondary-subtle nav-pic">
-              <i class="bi bi-percent text-danger"></i>
-            </div>
-            <div>
-              <h6 class="text-nowrap underline-animation">Weekly sale</h6>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="d-flex gap-2 align-items-center">
-            <div class="bg-secondary-subtle nav-pic">
-              <img src="Image/nav1.webp" width="30">
-            </div>
-            <div>
-              <h6 class="underline-animation">Vegetables
-              </h6>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="d-flex gap-2 align-items-center">
-            <div class="bg-secondary-subtle nav-pic">
-              <img src="Image/nav2.webp" width="30">
-            </div>
-            <div>
-              <h6 class="text-nowrap underline-animation">Easter is coming
-              </h6>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="d-flex gap-2 align-items-center">
-            <div class="bg-secondary-subtle nav-pic">
-              <img src="Image/nav3.webp" width="30">
-            </div>
-            <div>
-              <h6 class="text-nowrap underline-animation">Poultry meat
-              </h6>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="d-flex gap-2 align-items-center">
-            <div class="bg-secondary-subtle nav-pic">
-              <img src="Image/nav4.webp" width="30">
-            </div>
-            <div>
-              <h6 class="text-nowrap underline-animation">Fresh fruits
-              </h6>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="d-flex gap-2 align-items-center">
-            <div class="bg-secondary-subtle nav-pic">
-              <img src="Image/nav5.webp" width="30">
-            </div>
-            <div>
-              <h6 class="text-nowrap underline-animation">St. Patrick's day
-              </h6>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="d-flex gap-2 align-items-center">
-            <div class="bg-secondary-subtle nav-pic">
-              <img src="Image/nav6.webp" width="30">
-            </div>
-            <div>
-              <h6 class="text-nowrap underline-animation">Exotic fruits
-              </h6>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-  <!-- End: menu -->
-
-  <!--Start:Banner -->
-  <div id="groceryBannerCarousel" class=" carousel slide banner-Items" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#groceryBannerCarousel" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#groceryBannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#groceryBannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
-    <div class="carousel-inner  h-100">
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active h-100">
-        <img src="Image/banner1.webp" class="d-block w-100 h-100 object img-fluid" alt="Healthy Food">
-        <div class="carousel-caption text-start d-flex align-items-center h-100 w-100 banner ">
-          <div class="container">
-            <p class="fs-5 mb-2">🔥 Free shipping — order over $50</p>
-            <h1 class="display-4 fw-semibold">Healthy Food<br>Available To Everyone</h1>
-            <a href="#" class="btn btn-outline-light rounded-pill">Shop now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item h-100">
-        <img src="Image/banner2.webp" class="d-block w-100 h-100 object img-fluid" alt="Organic Eggs">
-        <div class="carousel-caption text-start d-flex align-items-center h-100 w-100 banner ">
-          <div class="container">
-            <p class="fs-5 mb-2">🥚 Organic products to your table</p>
-            <h1 class="display-4 fw-semibold">Organic Eggs From<br>Home-Grown Chicken</h1>
-            <a href="#" class="btn btn-outline-light rounded-pill ">Shop now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item h-100">
-        <img src="Image/banner3.webp" class="d-block w-100 h-100 object img-fluid" alt="Fresh Drinks">
-        <div class="carousel-caption  text-start d-flex align-items-center h-100 w-100 banner">
-          <div class="container">
-            <p class="fs-5 mb-2">🥝 Only natural ingredients</p>
-            <h1 class="display-4 fw-semibold">Everything Refreshing<br>Fresh Drinks</h1>
-            <a href="#" class="btn btn-outline-light rounded-pill ">Shop now</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!--End:banner-->
-
-  <!--cards-->
-  <div class="container">
-    <div class="cardsItems m-5">
-         
-       <div class="px-3">
-        <div class="card mb-3 border-0 rounded-4 card-bg ">
-        <div class="d-flex ">
-          <div class="d-flex flex-column justify-content-center p-3">
-            <p class="text-nowrap ">28 products</p>
-            <h5 class="card-title ">Berries from the garden</h5>
-            <span class=" border-0 text-start text-nowrap underline-animation"> shop now<i class="bi bi-chevron-right "></i></span>
-          </div>
-          <div class="d-flex align-items-end">
-            <img src="Image/01.webp" class="img-card rounded-end-4" alt="...">
-          </div>
-        </div>
-      </div>
-       </div>
-
-      <div class="px-3">
-        <div class="card mb-3  border-0 rounded-4 card-2 ">
-        <div class="d-flex ">
-          <div class="d-flex  flex-column justify-content-center p-3">
-            <p class="text-nowrap">97 products</p>
-            <h5 class="card-title ">Products for Easter table</h5>
-            <span class=" border-0 text-nowrap underline-animation"> shop now<i class="bi bi-chevron-right"></i></span>
-          </div>
-          <div class="d-flex align-items-end">
-            <img src="Image/02.webp" alt="..." class="img-card rounded-end-4">
-          </div>
-        </div>
-      </div>
-    </div>
-
-     <div class="px-3">
-       <div class="card mb-3 border-0 rounded-4 card-3 ">
-        <div class="d-flex ">
-          <div class="d-flex flex-column justify-content-center p-3">
-            <div>
-              <p class="text-nowrap">28 products</p>
-              <h5 class="card-title ">Berries from the garden</h5>
-              <span class=" border-0 text-nowrap underline-animation"> shop now<i class="bi bi-chevron-right"></i></span>
-            </div>
-          </div>
-          <div class="d-flex align-items-end">
-            <img src="Image/03.webp" class="img-card rounded-end-4" alt="...">
-          </div>
-        </div>
-      </div>
-     </div>
-     
-    </div>
-  </div>
- <!--Card:End-->
-
-  <!--Start:product-->
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-3 col">
-        <div class=" border-bottom pb-4 m-2">
-          <h4>Categories</h4>
-        </div>
-
-        <div class="row  flex-md-column gap-3 mt-4">
-
-          <div class=" col">
-            <div class="d-flex gap-3 align-items-center ">
-              <div class="bg-secondary-subtle cat-pic">
-                <img src="Image/catlog 1.webp" width="40">
-              </div>
-              <div class="text-nowrap">
-                <h6 class="underline-animation">Bakery & bread</h6>
-                <p>230 products</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex gap-3 align-items-center">
-              <div class="bg-secondary-subtle cat-pic">
-                <img src="Image/catlog 2.webp" width="40">
-              </div>
-              <div class="text-nowrap">
-                <h6 class="underline-animation">Vegetables</h6>
-                <p>180 products</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex gap-3 align-items-center">
-              <div class="bg-secondary-subtle cat-pic">
-                <img src="Image/catlog 3.webp" width="40">
-              </div>
-              <div class="text-nowrap">
-                <h6 class="underline-animation">Fresh fruits</h6>
-                <p>205 products</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex gap-3 align-items-center">
-              <div class="bg-secondary-subtle cat-pic">
-                <img src="Image/catlog4.webp" width="40">
-              </div>
-              <div class="text-nowrap">
-                <h6 class="underline-animation">Meet Italian dinner</h6>
-                <p>309 products</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex gap-3 align-items-center">
-              <div class="bg-secondary-subtle cat-pic">
-                <img src="Image/catlog5.webp" width="40">
-              </div>
-              <div class="text-nowrap">
-                <h6 class="underline-animation">Beverages</h6>
-                <p>374 products</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex gap-3 align-items-center">
-              <div class="bg-secondary-subtle cat-pic">
-                <img src="Image/catlog6.webp" width="40">
-              </div>
-              <div class="text-nowrap">
-                <h6 class="underline-animation">Meat products</h6>
-                <p>124 products</p>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex gap-3 align-items-center">
-              <div class="bg-secondary-subtle cat-pic">
-                <img src="Image/catlog7.webp" width="40">
-              </div>
-              <div class="text-nowrap">
-                <h6 class="underline-animation">Sauces and Ketchup</h6>
-                <p>219 products</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex gap-3 align-items-center">
-              <div class="bg-secondary-subtle cat-pic">
-                <img src="Image/catlog8.webp" width="40">
-              </div>
-              <div class="text-nowrap">
-                <h6 class="underline-animation">Dairy and eggs</h6>
-                <p>146 products</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-md-9  ">
-        <div class="d-flex justify-content-between border-bottom pb-4 m-2 mb-4">
-          <h4>Popular Products</h4>
-          <span>View all <i class="bi bi-chevron-right"></i></span>
-        </div>
-        <div class="row g-3">
-          <!--1-->
-          <div class="col-lg-3 col whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/p.1.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i>
                 </div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$2.15</h6>
-                <p class="underline">Muesli Fitness Energy,gluten free</p>
-                <p class="text-secondary">500g</p>
-              </div>
-            </div>
-          </div>
-
-          <!--2-->
-          <div class="col-lg-3 col whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/p2.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$3.12</h6>
-                <p class="underline">Fresh orange Klementina,spain</p>
-                <p class="text-secondary">1kg</p>
-              </div>
-            </div>
-          </div>
-
-          <!--3-->
-          <div class="col-lg-3 col whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/p3.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$0.80</h6>
-                <p class="underline">Pepsi soda classic,can</p>
-                <p class="text-secondary">300ml</p>
-              </div>
-            </div>
-          </div>
-
-          <!--4-->
-          <div class="col-lg-3 col whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/p4.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$2.99</h6>
-                <p class="underline">Mozzarella mini cheese Granaloro</p>
-                <p class="text-secondary">250g</p>
-              </div>
-            </div>
-          </div>
-
-          <!--5-->
-          <div class="col-lg-3 col whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/p5.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$1.24</h6>
-                <p class="underline">Coconut,Indonesia</p>
-                <p class="text-secondary">1 coconut</p>
-              </div>
-            </div>
-          </div>
-
-          <!--6-->
-          <div class="col-lg-3 col whole-product">
-            <div class="card product border border-0">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/p6.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$3.95</h6>
-                <p class="underline">Pesto sauce Barilla with basik,Italy</p>
-                <p class="text-secondary">200g</p>
-              </div>
-            </div>
-          </div>
-
-          <!--7-->
-          <div class="col-lg-3 col whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/p7.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$1.99</h6>
-                <p class="underline">Fresh mango,Spain</p>
-                <p class="text-secondary">1 Mango</p>
-              </div>
-            </div>
-          </div>
-
-          <!--8-->
-          <div class="col-lg-3 col whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/p8.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6>$2.40</h6>
-                <p class="underline">Fresh green asparagus,bunch</p>
-                <p class="text-secondary">300g</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--End:product-->
-
-  <!--svg-->
-  <div class="container">
-    <h3 class="text-center m-5">Shop By Lifestyle</h2>
-
-      <div class="svgItems row mb-5">
-
-        <div class="col-lg-3">
-          <div class="d-flex justify-content-center">
-            <div class="svg-1 mb-4 d-flex align-items-center justify-content-center ">
-              <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76"
-                fill="none">
-                <path
-                  d="M62.631 13.369l-7.214 7.214M20.583 55.417l-7.214 7.214M38 51.037c0-11.315-13.926-11.315-13.926-11.315s0 13.926 11.315 13.926H38m0-2.611v2.611m0-2.611c0-11.315 13.926-11.315 13.926-11.315s0 13.926-11.315 13.926H38m0-14.222c0-11.315-13.926-11.315-13.926-11.315s0 13.926 11.315 13.926H38m0-2.611v2.611m0-2.611c0-11.315 13.926-11.315 13.926-11.315s0 13.926-11.315 13.926H38m0 18.585v-6.967M72.833 38c0 19.238-15.595 34.833-34.833 34.833S3.167 57.238 3.167 38 18.762 3.167 38 3.167 72.833 18.762 72.833 38zM38 15.378s9.847 9.849 1.846 17.849L38 35.074l-1.846-1.847C28.153 25.227 38 15.378 38 15.378z"
-                  stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </div>
-          </div>
-          <div class="text-center d-flex flex-column align-items-center">
-            <h4 class="underline-animation ">Gluten-Free</h4>
-            <p class="text-secondary">Foods that don't contain gluten</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="d-flex justify-content-center">
-            <div class=" mb-4 d-flex align-items-center justify-content-center svg-2">
-              <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76"
-                fill="none">
-                <g stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10">
-                  <g stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                      d="M16.842 37.347c5.205 6.789 12.251 18.802 12.251 36.436h17.812c0-17.634 7.066-29.648 12.251-36.436m-7.599-3.958c-3.048 4.71-6.452 10.984-9.084 18.565V32.142">
-                    </path>
-                    <path d="M33.547 32.162v19.811c-2.632-7.56-6.036-13.834-9.104-18.584"></path>
-                  </g>
-                  <path
-                    d="M62.502 15.577c-.079 0-.139.02-.218.02-1.029-5.086-5.522-8.926-10.905-8.926-1.405 0-2.731.297-3.958.752-1.979-3.127-5.423-5.205-9.401-5.205-3.958 0-7.422 2.098-9.401 5.205-1.227-.475-2.553-.752-3.958-.752-5.403 0-9.896 3.84-10.905 8.926-.079 0-.139-.02-.218-.02-6.155 0-11.281 4.988-11.281 11.143s5.126 11.143 11.281 11.143c3.76 0 7.046-1.88 9.045-4.73.673.158 1.366.277 2.078.277 2.692 0 5.067-1.207 6.709-3.107 1.623 1.88 3.978 3.107 6.65 3.107s5.027-1.227 6.65-3.107c1.643 1.88 4.018 3.107 6.709 3.107.712 0 1.405-.099 2.078-.277 2.019 2.85 5.304 4.73 9.045 4.73 6.155 0 11.281-4.987 11.281-11.143s-5.126-11.143-11.281-11.143z"
-                    stroke-linejoin="round"></path>
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div class="text-center d-flex flex-column align-items-center">
-            <h4 class="underline-animation">Vegan</h4>
-            <p class="text-secondary">Vegetable based goodness</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="d-flex justify-content-center">
-            <div class="mb-4 d-flex align-items-center justify-content-center svg-3">
-              <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76"
-                fill="none">
-                <path d="M9.5 72.8336C9.5 72.8336 9.875 42.7074 38 34.8336" stroke="currentColor" stroke-width="2.5"
-                  stroke-miterlimit="10" stroke-linecap="round"></path>
-                <path
-                  d="M11.1264 58.4427C7.13273 49.8272 -11.3834 1.3653 66.3117 6.74996C67.4008 6.74996 68.49 7.82689 68.8531 8.90382C70.6684 18.9552 74.6621 64.1863 13.6678 59.8786C12.2156 59.8786 11.4895 59.5196 11.1264 58.4427Z"
-                  stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10"></path>
-              </svg>
-            </div>
-          </div>
-          <div class="text-center d-flex flex-column align-items-center">
-            <h4 class="underline-animation">Plant base</h4>
-            <p class="text-secondary">Based on herbal ingredients</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="d-flex justify-content-center">
-            <div class="mb-4 d-flex align-items-center justify-content-center svg-4 ">
-              <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none"
-                stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10" stroke-linejoin="round">
-                <path
-                  d="M58.59 33.535c-2.219-3.028-3.595-6.515-4.043-10.133-1.227-9.91-7.437-16.42-6.862-15.718-4.878-5.956-14.1-6.035-19.083-.163-4.128 4.863-6.442 10.345-7.191 16.12-.454 3.502-1.759 6.871-3.919 9.785-3.034 4.093-4.824 9.13-4.824 14.577 0 13.7 11.607 24.962 25.584 24.829 13.876-.132 25.083-11.198 25.083-24.829 0-5.399-1.758-10.395-4.744-14.469z">
-                </path>
-                <path
-                  d="M48.871 48.815c0 5.885-4.867 10.655-10.871 10.655S27.129 54.7 27.129 48.815 31.996 34.495 38 34.495s10.871 8.435 10.871 14.32z">
-                </path>
-              </svg>
-            </div>
-          </div>
-          <div class="text-center d-flex flex-column align-items-center">
-            <h4 class="underline-animation">Keto</h4>
-            <p class="text-secondary">Good fat served in food</p>
-          </div>
-        </div>
-
-      </div>
-  </div>
-  <!--End:svg-->
-
-  <!--Special Products-->
-  <div class="container">
-    <div class="row">
-
-      <div class="col-sm-3 col-xxl-3 col ">
-        <div class="card last-card border-0 ">
-          <img src="Image/banner.webp" class="card-img-bottom order-2 rounded-bottom-4" alt="...">
-          <div class="card-body order-1 card-sp rounded-top-4">
-            <h4 class="card-title">Make Breakfast Easy and Healthy</h4>
-            <span class="underline-animation">Shop now <i class="bi bi-chevron-right"></i></span>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-sm-9 col-xxl-9 col  ">
-        <div class="d-flex justify-content-between border-bottom pb-4 m-2 mb-4">
-          <h4>Special Products</h4>
-          <span class="underline-animation">View all <i class="bi bi-chevron-right"></i></span>
-        </div>
-        <div class="specialProducts">
-          <!--1-->
-          <div class="m-2  whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/sp-1.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$2.15</h6>
-                <p class="underline">Muesli Fitness Energy,gluten free</p>
-                <p class="text-secondary">500g</p>
-              </div>
-            </div>
-          </div>
-
-          <!--2-->
-          <div class="m-2 whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/sp2.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$3.12</h6>
-                <p class="underline">Fresh orange Klementina,spain</p>
-                <p class="text-secondary">1kg</p>
-              </div>
-            </div>
-          </div>
-
-          <!--3-->
-          <div class="m-2 whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/sp3.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$0.80</h6>
-                <p class="underline">Pepsi soda classic,can</p>
-                <p class="text-secondary">300ml</p>
-              </div>
-            </div>
-          </div>
-
-          <!--4-->
-          <div class="m-2 whole-product">
-            <div class="card product border border-0 ">
-              <div class="position-relative">
-                <div class="position-absolute  heart-sign"><i class="bi bi-heart"></i></div>
-                <img src="Image/sp4.webp" class="card-img-top product-img" alt="...">
-                <div class="position-absolute bottom-0 end-0 bg-secondary-subtle rounded-2 p-1 px-2 plus-sign"><i
-                    class="bi bi-plus"></i></div>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">$2.99</h6>
-                <p class="underline">Mozzarella mini cheese Granaloro</p>
-                <p class="text-secondary">250g</p>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!--End:Special Product-->
-
-  <!--Start:blog-->
-  <div class="container">
-    <div class="row">
-
-      <h2>Recipes</h2>
-
-
-      <div class="col-lg-5 mt-4 mb-5">
-        <div class="row g-3">
-          <!-- Recipe 1 -->
-          <div class="col-12">
-            <div class="card border-0 h-100">
-              <div class="row g-0 h-100">
-                <div class="col-4">
-                  <img src="Image/recipie1.webp" class="img-fluid h-100 rounded-start blog-img"  alt="...">
+                <div class=" col-xl-2 col-sm-3  d-none d-sm-block text-lg-center">
+                    <ul class="list-unstyled lh-lg d-flex flex-column justify-content-start align-items-start">
+                        <h5>Company</h5>
+                        <li class="underline-animation">Weekly sale</li>
+                        <li class="underline-animation"> special price</li>
+                        <li class="underline-animation"> Easter is coming</li>
+                        <li class="underline-animation">Italian dinner</li>
+                        <li class="underline-animation">Fresh fruits</li>
+                        <li class="underline-animation">Exotic fruits</li>
+                    </ul>
                 </div>
-                <div class="col-8">
-                  <div class="card-body h-100 d-flex flex-column justify-content-center">
-                    <h6 class="card-title mb-2 underline">Garden salad with a mix of lettuce, cucumber and tomato</h6>
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
+                <div class=" col-xl-2 col-sm-3  d-none d-sm-block text-lg-center">
+                    <ul class="list-unstyled lh-lg d-flex flex-column justify-content-start align-items-start">
+                        <h5>Account</h5>
+                        <li class="underline-animation">Weekly sale</li>
+                        <li class="underline-animation"> special price</li>
+                        <li class="underline-animation"> Easter is coming</li>
+                        <li class="underline-animation">Italian dinner</li>
+                        <li class="underline-animation">Fresh fruits</li>
+                        <li class="underline-animation">Exotic fruits</li>
+                    </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Recipe 2 -->
-          <div class="col-12">
-            <div class="card border-0 h-100">
-              <div class="row g-0 h-100">
-                <div class="col-4">
-                  <img src="Image/reciepie2.webp" class="img-fluid h-100 rounded-start blog-img"  alt="...">
+                <div class=" col-xl-2 col-sm-3  d-none d-sm-block text-lg-center">
+                    <ul class="list-unstyled lh-lg d-flex flex-column justify-content-start align-items-start">
+                        <h5>Customer service</h5>
+                        <li class="underline-animation">Weekly sale</li>
+                        <li class="underline-animation"> special price</li>
+                        <li class="underline-animation"> Easter is coming</li>
+                        <li class="underline-animation">Italian dinner</li>
+                        <li class="underline-animation">Fresh fruits</li>
+                        <li class="underline-animation">Exotic fruits</li>
+                    </ul>
                 </div>
-                <div class="col-8">
-                  <div class="card-body h-100 d-flex flex-column justify-content-center">
-                    <h6 class="card-title mb-2 underline">Raspberry fresh lemonade with lemon, strawberry syrup and mint</h6>
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <!-- Recipe 3 -->
-          <div class="col-12">
-            <div class="card border-0 h-100">
-              <div class="row g-0 h-100">
-                <div class="col-4">
-                  <img src="Image/reciepe3.webp" class="img-fluid h-100 rounded-start blog-img"  alt="...">
-                </div>
-                <div class="col-8">
-                  <div class="card-body h-100 d-flex flex-column justify-content-center">
-                    <h6 class="card-title mb-2 underline">Penne pasta with spinach and zucchini in a creamy sauce</h6>
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="mt-4">
-          <button class="btn  p-0 underline-animation">View all <i class="bi bi-chevron-right"></i></button>
-        </div>
-      </div>
-
-      <div class="col-lg-7">
-        <div class="border border-1 p-4 rounded-2 ">
-          <div class="d-flex ">
-            <div>
-              <img src="Image/book-cover.webp" class="rounded-2 img-fluid">
-            </div>
-            <div class="d-flex flex-column justify-content-center p-4  ">
-              <h4>The Best in Gastronomy</h4>
-              <p>Author:<span>Dana Chambers</span></p>
-              <p>An exquisite cookbook that takes readers on a culinary journey around the world. With stunning
-                photography and detailed instructions ...</p>
-              <h4>$12.40</h4>
-             <button type="button" class="btn btn-dark rounded-pill">Shop Book
-               <i class="bi bi-chevron-right"></i>
-             </button>
-              </button>
-            </div>
-          </div>
         </div>
 
-
-      </div>
-
-    </div>
-  </div>
-  <!--End:blog-->
-
-  <!--bootom cards-->
-  <div class="container ">
-    <div class="m-4">
-      <div class="row">
-        <div class="col-12 col-lg-7">
-          <div class="card mb-3 bg-secondary-subtle border-0 ">
-            <div class="d-flex flex-column-reverse flex-sm-row ">
-              <div class="   ">
-                <img src="Image/last1.webp" class=" card-img " alt="...">
-              </div>
-              <div class="d-flex align-items-center p-3">
-                <div class="">
-                  <h4 class="card-title">Make online shop easier with our Cartzilla App</h5>
-                    <button type="button" class="btn btn-light rounded-pill m-3 py-2"><i class="bi bi-google-play"></i> Google
-                      Play</button>
-                    <button type="button" class="btn btn-light rounded-pill py-2 "><i class="bi bi-apple"></i> Apple
-                      Store</button>
+        <!--Start:accordian-->
+        <div class="accordion accordion-flush d-sm-none footer-bg" id="footerMainAcc" data-bs-theme="dark">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Category
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#footerMainAcc">
+                    <div class="accordion-body">
+                        <ul class="list-unstyled lh-lg">
+                            <li class="underline-animation">Weekly sale</li>
+                            <li class="underline-animation"> special price</li>
+                            <li class="underline-animation"> Easter is coming</li>
+                            <li class="underline-animation">Italian dinner</li>
+                            <li class="underline-animation">Fresh fruits</li>
+                            <li class="underline-animation">Exotic fruits</li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="col-12 col-lg-5 ">
-          <div class=" mb-3 bg-secondary-subtle border-0 rounded-3">
-            <div class="d-flex flex-column-reverse flex-sm-row ">
-              <div class="">
-                <img src="Image/last2.webp" class="card-img" alt="...">
-              </div>
-              <div class="d-flex align-items-center p-3">
-                <div class="">
-                  <h4 class="card-title">We'd love to hear what you think!</h5>
-                    <button type="button" class="btn border-0 underline-animation"> Give a Feedback <i
-                        class="bi bi-chevron-right fs-6"></i></button>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Company
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#footerMainAcc">
+                    <div class="accordion-body">
+                        <ul class="list-unstyled lh-lg">
 
+                            <li class="underline-animation">mdnlg</li>
+                            <li class="underline-animation"> special price</li>
+                            <li class="underline-animation"> Easter is coming</li>
+                            <li class="underline-animation">Italian dinner</li>
+                            <li class="underline-animation">Fresh fruits</li>
+                            <li class="underline-animation">Exotic fruits</li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
 
-      </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Account
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#footerMainAcc">
+                    <div class="accordion-body">
+                        <ul class="list-unstyled lh-lg">
+                            <li class="underline-animation">Weekly sale</li>
+                            <li class="underline-animation"> special price</li>
+                            <li class="underline-animation"> Easter is coming</li>
+                            <li class="underline-animation">Italian dinner</li>
+                            <li class="underline-animation">Fresh fruits</li>
+                            <li class="underline-animation">Exotic fruits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Customer service
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#footerMainAcc">
+                    <div class="accordion-body">
+                        <ul class="list-unstyled lh-lg">
+                            <li class="underline-animation">Weekly sale</li>
+                            <li class="underline-animation"> special price</li>
+                            <li class="underline-animation"> Easter is coming</li>
+                            <li class="underline-animation">Italian dinner</li>
+                            <li class="underline-animation">Fresh fruits</li>
+                            <li class="underline-animation">Exotic fruits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End:accordian-->
+        <!--last-->
+
+        <div class="container text-sm-center py-4 text-xl-start">
+            <p>© All rights reserved. Made with<span><i class="bi bi-suit-heart-fill"></i></span> by Createx Studio</p>
+        </div>
+    </footer>
+    <!--End:footer-->
+
+    <!--Button-->
+    <div class="button-last sticky-bottom bg-transparent ">
+        <button class="btn btn-secondary rounded-pill btn-sm border-3 border-dark-subtle ">Top <i
+                class="bi bi-chevron-right"></i></button>
     </div>
 
-  </div>
-  <!--End:bootom cards-->
 
-  <!--Start:footer-->
-  <footer class="footer-bg text-white ">
-    <!--Above section-->
-    <div class="container py-5 border-bottom">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <h1>Stay in touch with us</h1>
-        <p>Receive the latest updates about our products & promotions</p>
-      </div>
-      <div class="d-flex justify-content-center align-items-center gap-2">
-        <input class="form-control max-w-500 py-2  rounded-5 bg-transparent email-text text-white" type="email" placeholder="Your email"
-          aria-label="email" />
-        <button type="button" class="btn btn-danger rounded-pill px-4">Subscribe</button>
-      </div>
-    </div>
-    <!--below section-->
-    <div class="container text-start py-5">
-      <div class="row align-items-start justify-content-start">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/slick/slick.min.js"></script>
 
-        <div class="col-xl-4 pb-sm-5">
-          <div class="text-sm-center text-xl-start ">
-            <h4>Cartzilla</h4>
-            <p>With a wide selection of fresh produce, pantry staples, and household essentials, we've got all you need
-              just a click away.</p>
-            <div>
-              <span><i class="bi bi-instagram px-3"></i></span>
-              <span><i class="bi bi-facebook px-3"></i></span>
-              <span><i class="bi bi-telegram px-3"></i></span>
-              <span><i class="bi bi-whatsapp px-3"></i></span>
-            </div>
-          </div>
-        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            popoverTriggerList.forEach(function (popoverTriggerEl) {
+                new bootstrap.Popover(popoverTriggerEl);
+            });
+        });
+    </script>
 
+    <!--slick-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.search_toggle').on(`click`, function () {
+                $(".search_wrap_sm").toggleClass("d-none")
+            })
+            $('#show_address').on(`click`, function () {
+                console.log($(".show_address").hasClass("active"), "test1");
+                if($(".show_address").hasClass("active")){
+                    $(".show_address").hide()
+                }else{
+                    $(".show_address").show("slow")
+                }
+                $(".show_address").toggleClass("active") 
+            })
 
-        <div class=" col-xl-2 col-sm-3 text-lg-center d-none d-sm-block">
-          <ul class="list-unstyled lh-lg d-flex flex-column justify-content-start align-items-start">
-            <h5>Categories</h5>
-            <li class="underline-animation">Weekly sale</li>
-            <li class="underline-animation"> special price</li>
-            <li class="underline-animation"> Easter is coming</li>
-            <li class="underline-animation">Italian dinner</li>
-            <li class="underline-animation">Fresh fruits</li>
-            <li class="underline-animation">Exotic fruits</li>
-          </ul>
-        </div>
-        <div class=" col-xl-2 col-sm-3  d-none d-sm-block text-lg-center">
-          <ul class="list-unstyled lh-lg d-flex flex-column justify-content-start align-items-start">
-            <h5>Company</h5>
-            <li class="underline-animation">Weekly sale</li>
-            <li class="underline-animation"> special price</li>
-            <li class="underline-animation"> Easter is coming</li>
-            <li class="underline-animation">Italian dinner</li>
-            <li class="underline-animation">Fresh fruits</li>
-            <li class="underline-animation">Exotic fruits</li>
-          </ul>
-        </div>
-        <div class=" col-xl-2 col-sm-3  d-none d-sm-block text-lg-center">
-          <ul class="list-unstyled lh-lg d-flex flex-column justify-content-start align-items-start">
-            <h5>Account</h5>
-            <li class="underline-animation">Weekly sale</li>
-            <li class="underline-animation"> special price</li>
-            <li class="underline-animation"> Easter is coming</li>
-            <li class="underline-animation">Italian dinner</li>
-            <li class="underline-animation">Fresh fruits</li>
-            <li class="underline-animation">Exotic fruits</li>
-          </ul>
-        </div>
-        <div class=" col-xl-2 col-sm-3  d-none d-sm-block text-lg-center">
-          <ul class="list-unstyled lh-lg d-flex flex-column justify-content-start align-items-start">
-            <h5>Customer service</h5>
-            <li class="underline-animation">Weekly sale</li>
-            <li class="underline-animation"> special price</li>
-            <li class="underline-animation"> Easter is coming</li>
-            <li class="underline-animation">Italian dinner</li>
-            <li class="underline-animation">Fresh fruits</li>
-            <li class="underline-animation">Exotic fruits</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+            $('.cardsItems').slick({
+                dots: false,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                margin: 10,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    }
+                ]
+            });
 
-    <!--Start:accordian-->
-    <div class="accordion accordion-flush d-sm-none footer-bg" id="accordionFlushExample" data-bs-theme="dark">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Category
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul class="list-unstyled lh-lg">
-              <li class="underline-animation">Weekly sale</li>
-              <li class="underline-animation"> special price</li>
-              <li class="underline-animation"> Easter is coming</li>
-              <li class="underline-animation">Italian dinner</li>
-              <li class="underline-animation">Fresh fruits</li>
-              <li class="underline-animation">Exotic fruits</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            $('.svgItems').slick({
+                dots: false,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 990,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 770,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    }
+                ]
+            });
 
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseOne">
-            Company
-          </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul class="list-unstyled lh-lg">
-
-              <li class="underline-animation">mdnlg</li>
-              <li class="underline-animation"> special price</li>
-              <li class="underline-animation"> Easter is coming</li>
-              <li class="underline-animation">Italian dinner</li>
-              <li class="underline-animation">Fresh fruits</li>
-              <li class="underline-animation">Exotic fruits</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
-            Account
-          </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul class="list-unstyled lh-lg">
-              <li class="underline-animation">Weekly sale</li>
-              <li class="underline-animation"> special price</li>
-              <li class="underline-animation"> Easter is coming</li>
-              <li class="underline-animation">Italian dinner</li>
-              <li class="underline-animation">Fresh fruits</li>
-              <li class="underline-animation">Exotic fruits</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
-            Customer service
-          </button>
-        </h2>
-        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul class="list-unstyled lh-lg">
-              <li class="underline-animation">Weekly sale</li>
-              <li class="underline-animation"> special price</li>
-              <li class="underline-animation"> Easter is coming</li>
-              <li class="underline-animation">Italian dinner</li>
-              <li class="underline-animation">Fresh fruits</li>
-              <li class="underline-animation">Exotic fruits</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--End:accordian-->
-    <!--last-->
-
-    <div class="container text-sm-center py-4 text-xl-start">
-      <p>© All rights reserved. Made with<span><i class="bi bi-suit-heart-fill"></i></span> by Createx Studio</p>
-    </div>
-  </footer>
-  <!--End:footer-->
-
-  <!--Button-->
-  <div class="button-last sticky-bottom bg-transparent ">
-      <button class="btn btn-secondary rounded-pill btn-sm border-3 border-dark-subtle ">Top  <i class="bi bi-chevron-right"></i></button>
-  </div>
-
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <!--bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/slick/slick.min.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-      popoverTriggerList.forEach(function (popoverTriggerEl) {
-        new bootstrap.Popover(popoverTriggerEl);
-      });
-    });
-  </script>
-
-  <!--Search-->
-  <script>
-    $('.search_toggle').on(`click`, function () {
-      $(".search_wrap_sm").toggleClass("d-none")
-    })
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.cardsItems').slick({
-        dots: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        margin:10,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          }
-        ]
-      });
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.svgItems').slick({
-        dots:false,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-          {
-            breakpoint: 990,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              
-            }
-          },
-          {
-            breakpoint: 770,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          }
-        ]
-      });
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.specialProducts').slick({
-        dots: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-          {
-            breakpoint: 990,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 840,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-        ]
-      });
-    });
-  </script>
+            $('.specialProducts').slick({
+                dots: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 990,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 840,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>

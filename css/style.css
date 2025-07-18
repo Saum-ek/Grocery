@@ -328,4 +328,9 @@ textarea {
 
 .whole-product .card-body .text-secondary {
   margin-bottom: 0;
+}
+
+.width-change {
+  width: 100%;
+  max-width: 700px !important;
 }/*# sourceMappingURL=style.css.map */
